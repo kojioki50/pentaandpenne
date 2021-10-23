@@ -1,0 +1,176 @@
+.menu {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #ccc;
+}
+
+.menu:hover {
+  opacity: 0.5;
+}
+
+.close-icon {
+  cursor: pointer;
+}
+
+.close-icon:hover {
+  opacity: 0.5;
+}
+
+.cart {
+  cursor: pointer;
+  background-color: #ccc;
+  padding: 10px 20px;
+}
+
+.cart:hover {
+  opacity: 0.5;
+}
+
+.sidebar-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: bisque;
+  transform: translateX(100%);
+}
+
+.sidebar-container.active {
+  transform: translateX(0px);
+  animation: 0.6s translateX;
+}
+
+@keyframes translateX {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.sidebar-container .sidebar-top {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 25px;
+}
+
+.sidebar-container .sidebar-top input {
+  border: 2px solid #333;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.l-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  border: 1px solid blue;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 38px;
+}
+
+header ul .title {
+  background-color: #ccc;
+  display: block;
+  color: black;
+  padding: 10px 20px;
+}
+
+header ul .title:hover {
+  opacity: 0.5;
+}
+
+.l-main-img {
+  width: 100%;
+  height: auto;
+  background-color: aqua;
+  margin: 0 auto 25px;
+}
+
+.l-main-img h1 {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.l-main-catch {
+  text-align: center;
+}
+
+.l-main-container {
+  margin: 0 38px;
+}
+
+.l-main-container .l-intro {
+  width: 100%;
+  height: 400px;
+  border: 1px solid red;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+.l-main-container div {
+  text-align: center;
+}
+
+.l-main-container .l-main-special {
+  font-size: 20px;
+  border: 1px solid green;
+  cursor: pointer;
+}
+
+.l-main-container .l-main-special:hover {
+  opacity: 0.5;
+}
+
+.l-main-container .l-main-special a {
+  display: block;
+  padding: 20px 50px;
+}
+
+.l-main-container .l-main-new {
+  text-align: center;
+  margin: 25px 0;
+}
+
+footer {
+  margin-bottom: 100px;
+}
+
+.footer {
+  margin: 0 38px;
+}
+
+.footer a {
+  cursor: pointer;
+  background-color: #ccc;
+  padding: 10px 20px;
+}
+
+.footer a:hover {
+  opacity: 0.5;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 17px auto;
+}

@@ -1,0 +1,30 @@
+
+ .menu{
+   padding: 10px 20px;
+   cursor:pointer;
+   background-color: #ccc;
+   &:hover{
+     opacity:.5;
+   }
+  
+}
+
+.close-icon{
+   cursor:pointer;
+
+    &:hover{
+    opacity:.5;
+  }
+
+}
+
+.cart{
+  cursor:pointer;
+  background-color: #ccc;
+  padding: 10px 20px;
+
+  &:hover{
+    opacity:.5;
+}
+
+}

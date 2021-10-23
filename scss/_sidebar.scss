@@ -1,0 +1,31 @@
+.sidebar-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background-color: bisque;
+  transform: translateX(100%);
+
+  &.active{
+    transform: translateX(0px);
+    animation: 0.6s translateX;
+  }
+
+ @keyframes translateX{
+   0%{
+      transform: translateX(100%);
+   }
+   100%{
+     transform: translateX(0px);
+   }
+  }
+  .sidebar-top{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 25px;
+  input{
+    border: 2px solid #333;
+  }
+}
+}

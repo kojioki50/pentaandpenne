@@ -1,0 +1,20 @@
+//インポート
+@use 'import';
+
+//ベース
+@use 'base';
+
+//ヘッダー
+@use "header";
+
+//メイン
+@use "main";
+
+//サイドバー
+@use "sidebar";
+
+//フッター
+@use "footer";
+
+//ボタン
+@use "button"

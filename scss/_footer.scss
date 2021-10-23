@@ -1,0 +1,23 @@
+footer{
+  margin-bottom: 100px;
+}
+
+.footer{
+  margin: 0 38px;
+  a{
+  cursor:pointer;
+  background-color: #ccc;
+  padding: 10px 20px;
+   &:hover{
+    opacity:.5;
+}
+  }
+}
+
+ul{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 17px auto;
+  
+}
