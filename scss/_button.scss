@@ -10,7 +10,12 @@
 }
 
 .close-icon{
+  text-align: right;
+  font-size: 35px;
+  line-height: 35px;
    cursor:pointer;
+   margin-left: 50px;
+   display: inline-block;
 
     &:hover{
     opacity:.5;

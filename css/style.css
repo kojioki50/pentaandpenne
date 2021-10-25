@@ -1,64 +1,3 @@
-.menu {
-  padding: 10px 20px;
-  cursor: pointer;
-  background-color: #ccc;
-}
-
-.menu:hover {
-  opacity: 0.5;
-}
-
-.close-icon {
-  cursor: pointer;
-}
-
-.close-icon:hover {
-  opacity: 0.5;
-}
-
-.cart {
-  cursor: pointer;
-  background-color: #ccc;
-  padding: 10px 20px;
-}
-
-.cart:hover {
-  opacity: 0.5;
-}
-
-.sidebar-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: bisque;
-  transform: translateX(100%);
-}
-
-.sidebar-container.active {
-  transform: translateX(0px);
-  animation: 0.6s translateX;
-}
-
-@keyframes translateX {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
-.sidebar-container .sidebar-top {
-  display: flex;
-  justify-content: space-between;
-  margin: 15px 25px;
-}
-
-.sidebar-container .sidebar-top input {
-  border: 2px solid #333;
-}
-
 body {
   overflow-x: hidden;
 }
@@ -150,12 +89,160 @@ header ul .title:hover {
   margin: 25px 0;
 }
 
-footer {
-  margin-bottom: 100px;
+.sidebar-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #88c0f4;
+  transform: translateX(-100%);
+  pointer-events: none;
+}
+
+@media screen and (max-width: 599px) {
+  .sidebar-container {
+    width: 100%;
+  }
+}
+.sidebar-container.active {
+  pointer-events: auto;
+  transform: translateX(0px);
+  animation: 0.8s translateX;
+}
+
+@keyframes translateX {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.sidebar-container .sidebar-top {
+  margin: 30px 25px;
+}
+
+.sidebar-container .sidebar-top form {
+  margin-top: 13px;
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar-container .sidebar-top form .input-border {
+  border: 1px solid #707070;
+  display: inline-block;
+  background: #fff url("../image/la-search@2x.png") no-repeat 12px center;
+  background-size: 20px 20px;
+  height: 35px;
+  width: 400px;
+  border-radius: 5px;
+  margin-right: 12px;
+  position: relative;
+}
+
+@media screen and (max-width: 599px) {
+  .sidebar-container .sidebar-top form .input-border {
+    width: 200px;
+  }
+}
+.sidebar-container .sidebar-top form .input-border input {
+  position: absolute;
+  left: 35px;
+  height: 46px;
+  width: 200px;
+}
+
+.sidebar-container .sidebar-top form button {
+  font-size: 16px;
+  line-height: 16px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: #fff;
+  color: #707070;
+  border: 1px solid #707070;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sidebar-container .sidebar-accordion {
+  padding: 0 38px;
+}
+
+.sidebar-container .accordion-area {
+  list-style: none;
+  margin: 0 auto;
+  max-width: 1200px;
+  background: #fff;
+}
+
+.sidebar-container .accordion-area li {
+  margin: 10px 0;
+}
+
+.sidebar-container .title {
+  position: relative;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: normal;
+  padding-left: 50px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  transition: all 0.5s ease;
+}
+
+.sidebar-container .title:hover {
+  background: #BADAF7;
+}
+
+.sidebar-container .title::before,
+.sidebar-container .title::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 2px;
+  background-color: #333;
+}
+
+.sidebar-container .title::before {
+  top: 48%;
+  left: 15px;
+  transform: rotate(0deg);
+}
+
+.sidebar-container .title::after {
+  top: 48%;
+  left: 15px;
+  transform: rotate(90deg);
+}
+
+.sidebar-container .title.close::before {
+  transform: rotate(45deg);
+}
+
+.sidebar-container .title.close::after {
+  transform: rotate(-45deg);
+}
+
+.sidebar-container .box {
+  display: none;
+}
+
+.sidebar-container .box p {
+  padding-left: 50px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  cursor: pointer;
+}
+
+.sidebar-container .box p:hover {
+  background: #D2E6F7;
 }
 
 .footer {
   margin: 0 38px;
+  background: #333;
+  padding: 20px 0;
 }
 
 .footer a {
@@ -168,9 +255,45 @@ footer {
   opacity: 0.5;
 }
 
-ul {
+.footer ul {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  margin: 17px auto;
+  justify-content: center;
+}
+
+.footer ul li {
+  margin: 20px 10px;
+}
+
+.menu {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #ccc;
+}
+
+.menu:hover {
+  opacity: 0.5;
+}
+
+.close-icon {
+  text-align: right;
+  font-size: 35px;
+  line-height: 35px;
+  cursor: pointer;
+  margin-left: 50px;
+  display: inline-block;
+}
+
+.close-icon:hover {
+  opacity: 0.5;
+}
+
+.cart {
+  cursor: pointer;
+  background-color: #ccc;
+  padding: 10px 20px;
+}
+
+.cart:hover {
+  opacity: 0.5;
 }

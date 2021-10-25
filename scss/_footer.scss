@@ -1,23 +1,30 @@
-footer{
-  margin-bottom: 100px;
-}
+@use "./import";
+
+
 
 .footer{
   margin: 0 38px;
-  a{
-  cursor:pointer;
-  background-color: #ccc;
-  padding: 10px 20px;
-   &:hover{
-    opacity:.5;
-}
-  }
-}
+  background: #333;
+  padding: 20px 0;
 
-ul{
+  a{
+    cursor:pointer;
+    background-color: #ccc;
+    padding: 10px 20px;
+    &:hover{
+      opacity:.5;
+    }
+  }
+  ul{
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  margin: 17px auto;
+  justify-content: center;
   
+ 
+
+  li{
+    margin: 20px 10px;
+  }
+  
+}
 }

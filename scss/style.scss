@@ -1,20 +1,22 @@
 //インポート
-@use 'import';
+@forward 'import';
 
 //ベース
-@use 'base';
+@forward 'base';
 
 //ヘッダー
-@use "header";
+@forward "header";
 
 //メイン
-@use "main";
+@forward "main";
 
 //サイドバー
-@use "sidebar";
+@forward "sidebar";
 
 //フッター
-@use "footer";
+@forward "footer";
 
 //ボタン
-@use "button"
+@forward "button";
+
+
