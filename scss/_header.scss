@@ -1,10 +1,10 @@
 header{
-  border: 1px solid blue;
+  background-color:#0971f5;
   
   ul{
     display: flex;
     justify-content: space-between;
-    margin: 25px 38px;
+    padding: 25px 38px;
 
  
   .title{
@@ -21,4 +21,33 @@ header{
   }
 
   
+}
+
+.box{
+  opacity:0;
+}
+
+.fadeup{
+  animation-name: fadeUpAnime;
+  animation-duration:.8s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes  fadeUpAnime{
+  0% {
+      opacity: 0;
+      transform:translateY(-100px)
+    }
+    100% {
+      opacity: 1;
+      transform:translateY(0);
+    }
+}
+
+.delay-time01{
+  animation-delay: .8s;
+}
+.delay-time02{
+  animation-delay: 1.6s;
 }
