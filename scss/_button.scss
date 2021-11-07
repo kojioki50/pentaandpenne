@@ -1,8 +1,8 @@
+@use "import";
 
  .menu{
    padding: 10px 20px;
    cursor:pointer;
-   background-color: #ccc;
    &:hover{
      opacity:.5;
    }
@@ -10,12 +10,14 @@
 }
 
 .close-icon{
-  text-align: right;
   font-size: 35px;
   line-height: 35px;
+  margin-top: 5px;
+  padding-bottom: 10px;
    cursor:pointer;
-   margin-left: 50px;
-   display: inline-block;
+   padding-left: 22%;
+   display: block;
+   color: #ccc;
 
     &:hover{
     opacity:.5;
@@ -25,7 +27,6 @@
 
 .cart{
   cursor:pointer;
-  background-color: #ccc;
   padding: 10px 20px;
 
   &:hover{
@@ -33,3 +34,101 @@
 }
 
 }
+
+main{
+position: relative;
+
+.share{
+  font-style: italic;
+  color: azure;
+  opacity: .8;
+  position: absolute;
+  top:-270px;
+  left:-120px;
+  display: flex;
+  transform: rotate(-90deg);
+  filter: drop-shadow(6px 6px 6px rgb(255, 50, 111));
+  @include import.mq(sp) {
+      top:-200px;
+      left:-80px;
+      font-size: 10px;
+  }
+  li{
+    padding:0 10px;
+  }
+  li:nth-child(2){
+    transform:rotate(90deg);
+    cursor: pointer;
+    font-size: 30px;
+    padding-right:30px;
+  @include import.mq(sp) {
+      font-size: 26px;
+  }
+  }
+  
+}
+
+}
+
+/* soceerball */
+//  .ball-box {
+//   position: relative;
+//   height: 100px;
+ 
+  .l_pagetop{
+    position: fixed;
+    bottom:50px;
+    right:0;
+    
+    .pagetop{
+      text-decoration:none;
+      color:#333;
+      display:block;
+      position: relative;
+      transition: .3s opacity;
+      cursor: pointer;
+      z-index: 20;
+      height:50px;
+      width:70px;
+    }
+
+
+    .pagetop_ball{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width:50px;
+      height:50px;
+      background-image: url("../image/soccerball.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+        background-position-x: center;
+        background-position-y: center;
+      transform:rotate(0);
+      animation: roll-r 14s linear infinite;
+        animation-duration: 14s;
+        animation-timing-function:linear;
+        animation-delay: 0s;
+        animation-iteration-count:infinite;
+        animation-direction: normal;
+        animation-fill-mode: none;
+        animation-play-state: running;
+        animation-name: roll-r;
+      z-index: 100;
+    }
+    
+    @keyframes roll-r {
+     from{
+       transform: translate(-50%,-50%) rotate(0);
+     }
+     to {
+       transform: translate(-50%,-50%) rotate(
+    360deg
+    );
+     }
+    }
+  }
+
+
+

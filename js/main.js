@@ -1,23 +1,24 @@
-$(function () {
+jQuery(function () {
 
-  $(".js-menu").click(function () {
-    $(".sidebar-container").toggleClass('active');
-    $(".sidebar-mask").toggleClass('active');
-
-  });
-  $(".close-icon").click(function () {
-    $(".sidebar-container").toggleClass('active');
-    $(".sidebar-mask").toggleClass('active');
+  jQuery(".js-menu").click(function () {
+    jQuery(".sidebar-container").addClass('active');
+    jQuery("header").fadeOut();
+    
 
   });
+  jQuery(".close-icon").click(function () {
+    jQuery(".sidebar-container").removeClass('active');
+    jQuery('header').fadeIn();
 
-  $('.title').on('click', function () {
-    var findElm = $(this).next(".box");
-    $(findElm).slideToggle();
-    if ($(this).hasClass('close')) {
-      $(this).removeClass('close');
+  });
+
+  jQuery('.title').on('click', function () {
+    var findElm = jQuery(this).next(".box");
+    jQuery(findElm).slideToggle();
+    if (jQuery(this).hasClass('close')) {
+      jQuery(this).removeClass('close');
     } else {
-      $(this).addClass('close');
+      jQuery(this).addClass('close');
     }
   
   });

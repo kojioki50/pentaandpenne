@@ -1,30 +1,42 @@
-@use "./import";
+@use "import";
 
 
 
 .footer{
-  margin: 0 38px;
-  background: #333;
-  padding: 20px 0;
+  padding: 20px 38px;
+  background-color: #0c1cbd;
+background-image: linear-gradient(135deg, #0c1cbd 0%, #6894dc 50%, #2536a0 100%);
+  
 
+  
+
+p{
+  text-align: center;
+  color:#ccc;
+  font-size: 12px;
+}
+ul{
+  display: flex;
+  margin-right: 30px;
+  justify-content: space-evenly;
+  @include import.mq(sp) {
+    display: flex;
+    font-size: 12px;
+    margin-right: 20px;
+     }
+  
+  
+  li{
+    margin: 10px 0;
+  }
   a{
+    
     cursor:pointer;
-    background-color: #ccc;
-    padding: 10px 20px;
+    color: #ccc;
+    
     &:hover{
       opacity:.5;
     }
-  }
-  ul{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  
- 
-
-  li{
-    margin: 20px 10px;
-  }
-  
+}
 }
 }

@@ -1,0 +1,150 @@
+@use "import";
+
+
+
+.p-main-catch{
+  text-align: center;
+}
+
+.p-intro-container{
+  height:400px;
+  margin-top:24px;
+  margin-bottom: 108px;
+
+.p-intro{
+  width:100%;
+  height: 100%;
+  border: 1px solid red;
+
+}
+.p-goods-box{
+  height: auto;
+h2{
+  text-align: right;
+  position: relative;
+  padding: 0 1rem 1rem;
+  font-size: 40px;
+  @include import.mq(sp) {
+  font-size:30px;
+    }
+
+  &:hover{
+    opacity:.5;
+  }
+  
+  a{
+    display: inline-block;
+    text-decoration: none;
+    font-style: italic;
+    color: rgba(255, 176, 30, 0.884);
+    
+  }
+}
+h2:after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 280px;
+  height: 10px;
+  content: '';
+  background-image: repeating-linear-gradient(45deg, #000, #000 1px, transparent 2px, transparent 5px);
+  backface-visibility: hidden;
+   @include import.mq(sp) {
+  width: 220px;
+    }
+}
+
+}
+}
+.js-goods-api{
+transform: translateX(200px);
+}
+.js-goods-api.appear{
+  transition: 1s;
+  transform: translateX(0);
+}
+
+
+.js-goods-new-api{
+transform: translateX(-200px);
+}
+.js-goods-new-api.appear{
+  transition: 1s;
+  transform: translateX(0);
+
+}
+
+
+
+  
+
+.p-single-main{
+  height:500px;
+  width:100%;
+  padding-top: 70px;
+}
+
+.slick-container{
+  margin-top: 36px;
+}
+
+.slick-prev{
+  padding-bottom: 50px;
+}
+
+.slick-next{
+  padding-bottom: 50px;
+}
+
+
+.wpcf7-form{
+  text-align: center;
+  p{
+    margin-top: 30px;
+  }
+input,
+textarea{
+  border: black 1px solid;
+  margin-top: 10px;
+}
+
+.wpcf7-submit{
+  padding:10px 20px;
+  border-radius: 9999px;
+  margin-left: 350px;
+}
+}
+
+.p-item-box{
+  display: flex;
+
+}
+
+.p-item-text{
+  h1,
+  h2,
+  p
+  {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  button{
+    margin-top:10px;
+    padding:20px;
+    background-color: #fff;
+    color: #707070;
+    border:1px solid #707070;
+    cursor: pointer;
+    border-radius: 9999px;
+
+  }
+}
+
+.p-error-box{
+  text-align: center;
+  height:400px;
+
+  p{
+    padding:100px 0 20px;
+  }
+}

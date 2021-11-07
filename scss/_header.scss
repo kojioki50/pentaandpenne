@@ -1,35 +1,85 @@
+@use "import";
+
 header{
-  background-color:#0971f5;
+  background-color: #0c1cbd;
+background-image: linear-gradient(135deg, #0c1cbd 0%, #6894dc 50%, #2536a0 100%);
+  padding: 0 38px;
+  width:100%;
+  height: auto;
+  position: fixed;
+  z-index: 100;
+  display: block;
+  // &.active{
+  //   display: none;
+  // }
+    @include import.mq(sp) {
+      height:40px;
+
+     }
+  
+  .header-sp-menu{
+    ul{
+    display: none;
+     @include import.mq(sp) {
+      display: flex;
+      justify-content:space-around;
+
+     }
+     
+    .box{
+       padding:5px 20px;
+       display: block;
+       color:#ccc;
+      font-size:16px;
+      }
+
+      .box:hover{
+         color:white;
+      }
+    }
+  }
+
+  
+
+  .header-menu{
+
   
   ul{
     display: flex;
     justify-content: space-between;
-    padding: 25px 38px;
+    padding: 5px 18px;
+    @include import.mq(sp) {
+      display: none;
+    }
 
+    
  
-  .title{
-    background-color: #ccc;
+   .title{
+    cursor: pointer;
     display: block;
-    color: black;
-    padding: 10px 20px;
-     &:hover{
-        opacity:.5;
+    color:#ccc;
+    padding: 10px 0;
+  }
+  .box{
+    font-size:16px;
+  }
+
+  .box:hover{
+     color:white;
+     
 }
    
-  }
+}
 
   }
 
   
 }
 
-.box{
-  opacity:0;
-}
 
 .fadeup{
   animation-name: fadeUpAnime;
-  animation-duration:.8s;
+  animation-duration:.5s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
@@ -46,8 +96,14 @@ header{
 }
 
 .delay-time01{
-  animation-delay: .8s;
+  animation-delay: .5s;
 }
 .delay-time02{
-  animation-delay: 1.6s;
+  animation-delay: .8s;
 }
+
+
+
+
+
+

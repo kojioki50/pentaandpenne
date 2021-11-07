@@ -1,15 +1,15 @@
-.video-container{
-  height:600px;
-  .video{
-    width:100%;
-    height:auto;
-    position: absolute;
-    z-index: -100;
-}
-}
+@use "import";
+
+
 
 
 .p-archive-main{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+ padding-top:70px;
+
 
 .main-penne{
   width:33%;
@@ -24,4 +24,82 @@ h1{
   width:33%;
 }
 
+}
+
+
+  .p-goods,
+  .new-goods{
+    width:100%;
+    gap:33px;
+    height: auto;
+    display: flex;
+    flex-wrap:wrap;
+    padding:20px 0;
+    margin: 20px auto;
+    border: 1px solid limegreen;
+     @include import.mq(sp) {
+     display: flex;
+     justify-content: space-evenly;
+      margin: 20px auto;
+}
+
+
+  .p-each-goods{
+    width:calc((100% - 99px) / 4 );
+    height: auto;
+    border: 1px solid yellow;
+    img
+    {
+      width:150px;
+      height:200px;
+    }
+
+     @include import.mq(sp) {
+      
+     
+      width:calc((100% - 33px) / 2 );
+}
+
+  .goods-img{
+    width:100%;
+    object-fit: cover;
+    
+  }
+}
+}
+
+.js-api{
+  opacity: 0;
+  transform:translateY(20px);
+  
+}
+
+.js-api.appear{
+  animation-name: sample-animation;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes  sample-animation{
+  0% {
+      opacity: 0;
+      transform:translateY(20px)
+    }
+    100% {
+      opacity: 1;
+      transform:translateY(0);
+    }
+}
+
+.delay-time03{
+  animation-delay: .2s;
+}
+.delay-time04{
+  animation-delay: .5s;
+}
+.delay-time05{
+  animation-delay: .8s;
+}
+.delay-time06{
+  animation-delay: 1s;
 }

@@ -1,44 +1,16 @@
-@use "./import";
+@use "import";
 
-// .sidebar-mask{
-//   position: absolute;
-//   background-color: #707070;
 
-//   top:0;
-//   right:0;
-//   z-index: 100;
-//   width:30%;
-//   height: 100%;
-//   opacity:0;
-//   pointer-events: none;
-
-//      @include import.mq(sp) {
-//       display: none;
-// }
-
-//   &.active{
-//     opacity:.8;
-//     animation: 0.8s fadeIn;
-           
-
-//           @keyframes fadeIn {
-//             0% {
-//               opacity: 0;
-//             }
-//             100% {
-//               opacity: .8;
-//             }
-//           }
-//         }
-//       }
-      
 .sidebar-container{
-  position: absolute;
+
+  position: fixed;
   top: 0;
   right: 0;
   width:100%;
   height: 100%;
-  background-color: #88c0f4;
+  // background-color: #88c0f4;
+   background-color: #0c1cbd;
+background-image: linear-gradient(135deg, #0c1cbd 0%, #6894dc 50%, #2536a0 100%);
   transform: translateX(-100%);
   pointer-events: none;
 
@@ -62,12 +34,16 @@
   }
 
   .sidebar-top{
-    margin: 30px 25px;
+    margin: 0 25px 10px;
 
   form{
     margin-top: 13px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
+    @include import.mq(sp) {
+      margin-left:20px;
+}
 
 
   .input-border{
@@ -87,9 +63,14 @@
 
     input{
       position:absolute;
-      left: 35px;
+      top: -5px;
+      left: 40px;
       height: 46px;
-      width: 200px;
+      width: 400px;
+
+       @include import.mq(sp) {
+      width:200px
+       }
   }
 }
 button{
@@ -181,6 +162,10 @@ p{
   padding-top: 1rem;
   padding-bottom: 1rem;
   cursor: pointer;
+
+  a{
+    color:black;
+  }
 }
 
   p:hover{
