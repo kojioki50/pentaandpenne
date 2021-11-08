@@ -37,33 +37,30 @@
         </div>
       <?php endif; ?>
 
-      <div class="new-goods">
-        <div class="p-each-goods">
-          <img  class="goods-img js-api delay-time03" src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/penne2.png">
-          <p>ペンネ１</p>
-          <p>２００円</p>
-        </div>
+      <div class="slick-container">
+        <h2>こちらもいかがでしょうか</h2>
+      <div class="center">
         
-        
-        <div class="p-each-goods">
-          <img src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/penne1.jpg" class="goods-img js-api delay-time04">
-          <p>ペンネ２</p>
-          <p>３００円</p>
-        </div>
-        
-        
-        <div class="p-each-goods">
-          <img src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/penta1.png" class="goods-img js-api delay-time05">
-          <p>ペンタ１</p>
-          <p>３００円</p>
-        </div>
-        
-        
-        <div class="p-each-goods">
-          <img src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/penta-bag1.png" class="goods-img js-api delay-time06">
-          <p>ペンタ２</p>
-          <p>２００円</p>
-        </div>
+      <?php
+      $args = array(
+        'post_type' =>'post',
+        // 'post__not_in' => array($post -> ID),
+        'posts_per_page' => -1,
+        'orderby' => 'rand'
+      );
+      $new_query = new WP_Query($args);
+      if($new_query->have_posts()): while($new_query->have_posts()):
+        $new_query->the_post();
+      ?>
+        <?php if(has_post_thumbnail()):?>
+      <div> <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium',['class' => 'top-img']); ?></a> </div>
+        <?php endif;?>
+        <?php endwhile;
+        wp_reset_postdata();
+        else: ?>
+        <h3>投稿はありません。</h3>
+        <?php endif; ?>
+      </div>
       </div>
       <?php wp_pagenavi();?>
     </div>

@@ -16,10 +16,10 @@
        
        <div class="p-goods">
          <?php  if (have_posts()) : while (have_posts()) :the_post(); ?>
-         <a class="p-each-goods" href="<?php the_permalink(); ?>">
+         
          <div>
         <?php if(has_post_thumbnail()): ?>
-          <?php the_post_thumbnail('medium',['class' => 'goods-img js-api delay-time03']); ?>
+          <a class="p-each-goods" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium',['class' => 'goods-img js-api delay-time03']); ?></a>
           <?php else: ?>
             <?php endif; ?>
             <p>ペンネ１</p>
@@ -29,20 +29,30 @@
             <?php else: ?>
             <?php endif; ?>
           </div>
-
-        <div class="slick-container">
-          <h2>こちらもいかがでしょうか</h2>
-          <ul class="center">
-          <li><img class="p-top-img" src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/pic3.png"></li>
-          <li><img class="p-top-img" src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/pic4.png"></li>
-          <li><img class="p-top-img" src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/pic5.png"></li>
-          <li><img class="p-top-img" src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/pic3.png"></li>
-          <li><img class="p-top-img" src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/pic4.png"></li>
-          <li><img class="p-top-img" src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/pic5.png"></li>
-          <li><img class="p-top-img" src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/pic3.png"></li>
-          <li><img class="p-top-img" src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/pic4.png"></li>
-          <li><img class="p-top-img" src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/pic5.png"></li>
-        </ul>
+            </div>
+       <div class="slick-container">
+        <h2>こちらもいかがでしょうか</h2>
+      <div class="center">
+      <?php
+      $args = array(
+        'post_type' =>'post',
+        // 'post__not_in' => array($post -> ID),
+        'posts_per_page' => -1,
+        'orderby' => 'rand'
+      );
+      $new_query = new WP_Query($args);
+      if($new_query->have_posts()): while($new_query->have_posts()):
+        $new_query->the_post();
+      ?>
+        <?php if(has_post_thumbnail()):?>
+      <div> <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium',['class' => 'top-img']); ?></a> </div>
+        <?php endif;?>
+        <?php endwhile;
+        wp_reset_postdata();
+        else: ?>
+        <h3>投稿はありません。</h3>
+        <?php endif; ?>
+      </div>
       </div>
       <?php wp_pagenavi();?>
     </main>

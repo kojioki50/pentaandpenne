@@ -116,11 +116,41 @@ textarea{
 }
 
 .p-item-box{
-  display: flex;
+  display: block;
+  @include import.mq(pc) {
+    display: flex;
+    gap: 100px;
+     justify-content: space-between;
+     height: auto;
+    }
+  
+  .slick-container-item{
+    width:100%;
+    @include import.mq(pc) {
+       width:50%;
+       background-position-x: center;
+       background-position-y: center;
+       object-fit: cover;
+       object-position: center;
+    }
+  
+
 
 }
 
+
 .p-item-text{
+  width:100%;
+  @include import.mq(pc) {
+     width:50%;
+     position: relative;
+    }
+    h1{
+      margin-top: 30px;
+      @include import.mq(pc) {
+       margin-top: 0;
+      }
+    }
   h1,
   h2,
   p
@@ -136,10 +166,15 @@ textarea{
     border:1px solid #707070;
     cursor: pointer;
     border-radius: 9999px;
+     @include import.mq(pc) {
+      position: absolute;
+      top:80%;
+      left:40%;
+      }
 
   }
 }
-
+}
 .p-error-box{
   text-align: center;
   height:400px;

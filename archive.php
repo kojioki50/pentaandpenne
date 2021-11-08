@@ -48,22 +48,9 @@
             
             
             <div class="p-main-special"><a class="goods" href="<?php echo esc_url(home_url('/event'));?>">特設ページ</a></div>
-            
-            <div class="slick-container">
-              <h2>こちらもいかがでしょうか</h2>
-              <ul class="center">
-                <li><img class="p-top-img" src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/pic3.png"></li>
-                <li><img class="p-top-img" src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/pic4.png"></li>
-                <li><img class="p-top-img" src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/pic5.png"></li>
-                <li><img class="p-top-img" src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/pic3.png"></li>
-                <li><img class="p-top-img" src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/pic4.png"></li>
-                <li><img class="p-top-img" src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/pic5.png"></li>
-                <li><img class="p-top-img" src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/pic3.png"></li>
-                <li><img class="p-top-img" src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/pic4.png"></li>
-                <li><img class="p-top-img" src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/pic5.png"></li>
-              </ul>
-              <?php wp_pagenavi();?>
-            </div>
+      
+     
+          <?php wp_pagenavi();?>
           </main>
         
           <?php get_sidebar(); ?>

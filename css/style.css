@@ -294,30 +294,29 @@ body {
 .center {
   margin-left: 38px;
   margin-right: 38px;
+  padding: 30px 0;
 }
 
-.center .slick-slide {
+.center a {
+  display: block;
   margin-right: 20px;
 }
 
-.center .slick-slide .p-top-img {
-  background-size: cover;
-  height: auto;
+.center .wp-post-image {
   width: 100%;
+  height: 100%;
   object-position: cover;
   object-fit: cover;
-  margin-bottom: 60px;
-  margin-top: 20px;
 }
 
 @media screen and (min-width: 1025px) {
-  .center .slick-slide .p-top-img {
+  .center .wp-post-image {
     width: 100%;
-    height: auto;
+    height: 200px;
     overflow: hidden;
   }
 }
-.center .slick-slide .p-top-img h1 {
+.center h1 {
   position: absolute;
   color: #333;
   padding-top: 170px;
@@ -325,7 +324,7 @@ body {
   font-size: 36px;
 }
 
-.center .slick-slide ul.slick-dots {
+.center ul.slick-dots {
   margin-bottom: 50px;
 }
 
@@ -733,7 +732,7 @@ main .share li:nth-child(2) {
   display: flex;
   flex-wrap: wrap;
   padding: 20px 0;
-  margin: 20px auto;
+  margin: 30px auto;
   border: 1px solid limegreen;
 }
 
@@ -923,17 +922,57 @@ main .share li:nth-child(2) {
 }
 
 .p-item-box {
-  display: flex;
+  display: block;
 }
 
-.p-item-text h1,
-.p-item-text h2,
-.p-item-text p {
+@media screen and (min-width: 1025px) {
+  .p-item-box {
+    display: flex;
+    gap: 100px;
+    justify-content: space-between;
+    height: auto;
+  }
+}
+.p-item-box .slick-container-item {
+  width: 100%;
+}
+
+@media screen and (min-width: 1025px) {
+  .p-item-box .slick-container-item {
+    width: 50%;
+    background-position-x: center;
+    background-position-y: center;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+.p-item-box .p-item-text {
+  width: 100%;
+}
+
+@media screen and (min-width: 1025px) {
+  .p-item-box .p-item-text {
+    width: 50%;
+    position: relative;
+  }
+}
+.p-item-box .p-item-text h1 {
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 1025px) {
+  .p-item-box .p-item-text h1 {
+    margin-top: 0;
+  }
+}
+.p-item-box .p-item-text h1,
+.p-item-box .p-item-text h2,
+.p-item-box .p-item-text p {
   text-align: left;
   margin-bottom: 20px;
 }
 
-.p-item-text button {
+.p-item-box .p-item-text button {
   margin-top: 10px;
   padding: 20px;
   background-color: #fff;
@@ -943,6 +982,13 @@ main .share li:nth-child(2) {
   border-radius: 9999px;
 }
 
+@media screen and (min-width: 1025px) {
+  .p-item-box .p-item-text button {
+    position: absolute;
+    top: 80%;
+    left: 40%;
+  }
+}
 .p-error-box {
   text-align: center;
   height: 400px;
