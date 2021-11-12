@@ -20,15 +20,15 @@
 
   add_action('wp_enqueue_scripts','penta_script');
 
-  function post_has_archive( $args, $post_type) {
+  // function post_has_archive( $args, $post_type) {
 
-    if ('post' == $post_type) {
-        $args['rewrite'] = true;
-        $args['has_archive'] = 'archive';
-    }
-    return $args;
-  }
-  add_filter('register_post_type_args', 'post_has_archive', 10, 2);
+  //   if ('post' == $post_type) {
+  //       $args['rewrite'] = true;
+  //       $args['has_archive'] = 'archive';
+  //   }
+  //   return $args;
+  // }
+  // add_filter('register_post_type_args', 'post_has_archive', 10, 2);
 
   add_action('init',function(){
     register_post_type('event',[
@@ -36,6 +36,7 @@
       'public' => true,
       'menu_icon'=> 'dashicons-info',
       'supports' => ['thumbnail', 'title', 'editor', 'custom-fields'],
+      'show_in_rest' => true,
       'has_archive' => true,
     ]);
 
@@ -44,3 +45,25 @@
     'hierarchical' => true,
   ]);
   });
+
+  add_action('init',function(){
+    register_post_type('item',[
+      'label' => 'アイテム',
+      'public' => true,
+      'menu_icon'=> 'dashicons-beer',
+      'supports' => ['thumbnail', 'title', 'editor', 'custom-fields'],
+      'show_in_rest' => true,
+      'has_archive' => true,
+    ]);
+    });
+
+  add_action('init',function(){
+    register_post_type('blog',[
+      'label' => 'ブログ',
+      'public' => true,
+      'menu_icon'=> 'dashicons-car',
+      'supports' => ['thumbnail', 'title', 'editor', 'custom-fields'],
+      'show_in_rest' => true,
+      'has_archive' => true,
+    ]);
+    });

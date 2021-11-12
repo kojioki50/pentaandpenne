@@ -52,6 +52,7 @@ h1{
     {
       width:150px;
       height:200px;
+      vertical-align: bottom;
     }
 
      @include import.mq(sp) {
@@ -63,9 +64,21 @@ h1{
   .goods-img{
     width:100%;
     object-fit: cover;
-    
+
+     @include import.mq(pc) {
+       width:50%;
+    }
   }
 }
+}
+
+.p-archive-item-img{
+   width:100%;
+   height: auto;
+  img{
+  height: auto;
+  width:70%
+  }
 }
 
 .js-api{
@@ -102,4 +115,10 @@ h1{
 }
 .delay-time06{
   animation-delay: 1s;
+}
+
+.p-each-price{
+  background-color: rgba(220, 20, 60, 0.788);
+  color:white;
+  font-size: 20px;
 }

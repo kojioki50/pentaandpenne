@@ -14,12 +14,52 @@
     <div class="l-main-container">
       <?php the_content(); ?>
      <? get_search_form(); ?>
+
+<div class="p-info-box">
+      <?php
+$information= get_posts( array(
+//ここで取得条件を指定する
+  'post_type' => 'post'
+));
+if( $information):
+?>
+<ul class="info-list">
+<?php
+foreach( $information as $post ):
+setup_postdata( $post );
+?>
+<li>
+<?php $news = get_post_meta(get_the_ID(),'ニュース', true);
+if($news):
+ 
+  if($news == "新着"){?>
+    <span class="p-topnews"><?php echo esc_html($news) ?></span>
+  <?php } elseif ($news == "お知らせ"){?>
+     <span class="p-infonews"><?php echo esc_html($news) ?></span>
+  <?php } elseif ($news == "重要") {?>
+     <span class="p-importantnews"><?php echo esc_html($news) ?></span>
+  <?php } else ?> <span class="othernews"></span>
+  <?php  endif; ?>
+
+<?php the_time('  Y年n月j日'); ?> - <a href="<?php the_permalink(); ?>"> <?php the_title(); ?></a>
+</li>
+<?php
+endforeach;
+wp_reset_postdata();
+?>
+</ul>
+<?php else: ?>
+<p>表示できる情報はありません。</p>
+<?php endif; ?>
+</div>
+
+
       <div class="p-main-catch">キャッチフレーズ</div>
       <div class="p-intro-container">
         <div class="p-intro"></div>
 
           <div class="p-goods-box js-goods-api">
-            <h2><a href="<?php echo esc_url(home_url('/archive'));?>">Go To Goods</a></h2>
+            <h2><a href="<?php echo esc_url(home_url('/item'));?>">Go To Goods</a></h2>
           </div>
       </div>
 

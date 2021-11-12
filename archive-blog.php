@@ -1,7 +1,7 @@
 <?php get_header(); ?>
   <div class="video-container">
     <div class="p-main-title blur">
-       <h1>NEWS</h1>
+       <h1>BLOG</h1>
     </div>
     <video class='video' src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/Snow.mp4" autoplay muted loop></video>
   </div>
@@ -27,7 +27,7 @@
 
           <div class="p-archive-item-text">
             <?php the_content(); ?>
-            <button class="cart-button">詳しく見る</button>
+            <a  class="cart-button" href="<?php the_permalink(); ?>">詳しく見る</a>
           </div>
      
       </div>
@@ -47,4 +47,3 @@
           <?php get_sidebar(); ?>
           
           <?php get_footer(); ?>
-          

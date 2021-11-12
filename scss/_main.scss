@@ -1,5 +1,9 @@
 @use "import";
 
+.wp-block-create-block-gutenpride{
+  color:black;
+}
+
 body{
 background-color: rgb(233, 238, 252);
 }
@@ -199,7 +203,7 @@ h2:after {
    }
   .wp-post-image{
     width:100%;
-    height:100%;
+    height:200px;
     object-position: cover;
     object-fit: cover;
     

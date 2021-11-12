@@ -27,7 +27,7 @@
         <li><a class="title box fadeup delay-time02" href="<?php echo esc_url(home_url('/archive'));?>"> グッズ</a></li>
         <li><a class="title box fadeup delay-time01" href="<?php echo esc_url(home_url('/contact-form'));?>"> お問い合わせ</a></li>
         <li><a class="title box fadeup" href="<?php echo esc_url(home_url('/'));?>">PENS</a></li>
-        <li><a class="title box fadeup delay-time01">利用ガイド</a></li>
+        <li><a class="title box fadeup delay-time01" href="<?php echo esc_url(home_url('/blog'));?>">BLOG</a></li>
         <li><button class="title box fadeup delay-time02">カート</button></li>
       </ul>
       
