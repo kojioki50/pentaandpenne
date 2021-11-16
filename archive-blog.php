@@ -16,18 +16,18 @@
        <? get_search_form(); ?>
 
        <?php  if (have_posts()) : while (have_posts()) :the_post(); ?>
-       <div class="p-item-box">
+       <div class="p-blog__box">
 
-        <div class="p-archive-item-img">
+        <div class="p-blog__img">
           <?php if(has_post_thumbnail()): ?>
           <?php the_post_thumbnail('medium',['class' => 'goods-img js-api delay-time03']); ?>
           <?php else: ?>
           <?php endif; ?>
         </div>
 
-          <div class="p-archive-item-text">
-            <?php the_content(); ?>
-            <a  class="cart-button" href="<?php the_permalink(); ?>">詳しく見る</a>
+          <div class="p-blog__text">
+            <?php the_excerpt(); ?>
+            <a  class="c-detail" href="<?php the_permalink(); ?>">詳しく見る</a>
           </div>
      
       </div>

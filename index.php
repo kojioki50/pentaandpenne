@@ -33,16 +33,18 @@ setup_postdata( $post );
 if($news):
  
   if($news == "新着"){?>
-    <span class="p-topnews"><?php echo esc_html($news) ?></span>
+    <a href="<?php the_permalink(); ?>"><span class="p-topnews"><?php echo esc_html($news) ?></span><?php the_time('Y年n月j日'); ?> -  <?php the_title(); ?></a>
+    </li>
   <?php } elseif ($news == "お知らせ"){?>
-     <span class="p-infonews"><?php echo esc_html($news) ?></span>
+     <a href="<?php the_permalink(); ?>"><span class="p-infonews"><?php echo esc_html($news) ?></span><?php the_time('Y年n月j日'); ?> -  <?php the_title(); ?></a>
+    </li>
   <?php } elseif ($news == "重要") {?>
-     <span class="p-importantnews"><?php echo esc_html($news) ?></span>
+     <a href="<?php the_permalink(); ?>"><span class="p-importantnews"><?php echo esc_html($news) ?></span><?php the_time('Y年n月j日'); ?> -  <?php the_title(); ?></a>
+    </li>
   <?php } else ?> <span class="othernews"></span>
   <?php  endif; ?>
 
-<?php the_time('  Y年n月j日'); ?> - <a href="<?php the_permalink(); ?>"> <?php the_title(); ?></a>
-</li>
+
 <?php
 endforeach;
 wp_reset_postdata();
@@ -74,25 +76,33 @@ wp_reset_postdata();
       </div>
 
       <div class="p-goods">
-      <?php  if (have_posts()) : while (have_posts()) :the_post(); ?>
+         <?php
+      $args = array(
+        'post_type' =>'post',
+        // 'post__not_in' => array($post -> ID),
+        'posts_per_page' => -1,
+        'orderby' => 'DESC'
+      );
+      $new_query = new WP_Query($args);
+      if($new_query->have_posts()): while($new_query->have_posts()):
+        $new_query->the_post();
+      ?>
+      
+         <!-- <a class="p-each-goods" href="<?php the_permalink(); ?>"> -->
+        <?php if(has_post_thumbnail()):?>
+      <div class="p-each-goods"> <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium',['class' => 'goods-img js-api delay-time03']); ?></a> </div>
+        <?php endif;?>
+        <?php endwhile;
+        wp_reset_postdata();
+        else: ?>
+        <h3>投稿はありません。</h3>
+        <?php endif; ?>
+        <!-- </a> -->
+      </div>
+      </div>
 
-      <a class="p-each-goods" href="<?php the_permalink(); ?>">
-          <div>
-          <?php if(has_post_thumbnail()): ?>
-          <?php the_post_thumbnail('medium',['class' => 'goods-img js-api delay-time03']); ?>
-          <?php else: ?>
-            <?php endif; ?>
-            
-            <p>ペンネ１</p>
-            <p>２００円</p>
-          </div>
-          </a>
-          
-          
-          <?php endwhile;?>
-          <?php else: ?>
-          <?php endif; ?>
-          </div>
+      
+
     </div>
     <!-- <div class="ball-box"> -->
         <div class="l_pagetop">      

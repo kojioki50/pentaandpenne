@@ -31,9 +31,6 @@
       </div>
 
 
-     
-            <div class="p-main-special"><a class="goods" href="<?php echo esc_url(home_url('/event'));?>">特設ページ</a></div>
-            
          <?php get_template_part('partials/slick'); ?>
               <?php wp_pagenavi();?>
             </div>

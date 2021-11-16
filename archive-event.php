@@ -15,31 +15,43 @@
     <div class="l-main-container">
        <? get_search_form(); ?>
 
-       <?php  if (have_posts()) : while (have_posts()) :the_post(); ?>
-       <div class="p-item-box">
+        <div class="p-goods">
+      <?php  if (have_posts()) : while (have_posts()) :the_post(); ?>
 
-        <div class="p-archive-item-img">
+      <a class="p-each-goods" href="<?php the_permalink(); ?>">
+          <div>
           <?php if(has_post_thumbnail()): ?>
           <?php the_post_thumbnail('medium',['class' => 'goods-img js-api delay-time03']); ?>
           <?php else: ?>
-          <?php endif; ?>
-        </div>
+            <?php endif; ?>
 
-          <div class="p-archive-item-text">
-            <?php the_content(); ?>
-            <button class="cart-button">詳しく見る</button>
+            <?php
+            //全てのカスタムフィールドの情報を取得
+            $fields = get_post_custom();
+            //カスタムフィールドの情報がある場合
+            if($fields){?>
+              <ul class="p-each-price">
+              <?php foreach( $fields as $key => $value) {
+                //_（アンダースコア）から始まるキー以外の場合
+                if(!(preg_match( "/^_/",$key))){
+                  //キーの最初の値を取得
+                  echo esc_html( "<li>" .$key . "</li>");
+                  echo esc_html("<li>" ."¥". $value[0] . "</li>");
+                }
+              } ?>
+              </ul>
+            <?php }
+            ?>
+
           </div>
-     
-      </div>
-
+          </a>
+          
+          
           <?php endwhile;?>
           <?php else: ?>
           <?php endif; ?>
-          
-          
-          <div class="p-main-special"><a class="goods" href="<?php echo esc_url(home_url('/event'));?>">特設ページ</a></div>
-          
-          
+          </div>
+
           <?php wp_pagenavi();?>
         </div>
   </main>

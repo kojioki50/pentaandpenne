@@ -1,3 +1,4 @@
+
 <div class="sidebar-container">
     <div class="sidebar-top">
       <div class="close-icon"><i class="bi bi-x-lg "></i></div>
@@ -24,19 +25,18 @@
           <section>
             <h3 class="title">イベント</h3>
             <div class="box">
-              <p><a></a></p>
-              <p><a></a></p>
-              <p><a></a></p>
+              <p><a>２周年記念アイテム</a></p>
+              <p><a>冬限定アイテム</a></p>
             </div>
           </section>
         </li>
         <li>
           <section>
-            <h3 class="title">お問い合わせ</h3>
+            <h3 class="title">その他</h3>
             <div class="box">
               <p><a>お問い合わせフォーム</a></p>
               <p><a>利用ガイド/よくある質問</a></p>
-              <p><a>MINNE</a></p>
+              <p><a>BLOG</a></p>
               <p><a>プライバシーポリシー</a></p>
               <p><a>特定商取引法に基づく表示</a></p>
             </div>

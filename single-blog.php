@@ -16,19 +16,14 @@
       <div class="l-main-container">
      <? get_search_form(); ?>
 
-     <div class="p-item-box">
+     <div>
        
         <?php  if (have_posts()) : while (have_posts()) :the_post(); ?>
         <div class="item-img" href="<?php the_permalink(); ?>">
 
-          <?php if(has_post_thumbnail()): ?>
-          <?php the_post_thumbnail('large',['class' => 'goods-img js-api delay-time03']); ?>
-          <?php else: ?>
-          <?php endif; ?>
-
         </div>
 
-         <div class="p-item-text">
+         <div>
             <h2><?php the_title(); ?></h2>
             <p><?php the_content(); ?></p>
           </div>

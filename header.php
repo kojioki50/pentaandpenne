@@ -13,13 +13,14 @@
   <?php wp_head(); ?>
 </head>
 <body <?php body_class();?>>
-
+  
   <div class="l-wrapper">
   <header>
     <div class="header-sp-menu">
       <ul>
-        <li><button class="menu js-menu box fadeup ">メニュー</button></li>
+        <li><button class="menu js-menu box fadeup delay-time01">メニュー</button></li>
         <li><a class="title box fadeup" href="<?php echo esc_url(home_url('/'));?>">PENS</a></li>
+         <li><button class="title box fadeup delay-time01">カート</button></li>
       </ul>
     </div>
     <div class="header-menu">
