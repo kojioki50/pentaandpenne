@@ -4,18 +4,20 @@
 .sidebar-container{
 
   position: absolute;
+  z-index: 100;
   top: 0;
   right: 0;
   width:100%;
   height: 100%;
-  // background-color: #88c0f4;
-   background-color: #0c1cbd;
-background-image: linear-gradient(135deg, #0c1cbd 0%, #6894dc 50%, #2536a0 100%);
+   background-color: #4158D0;
+background-image: linear-gradient(111deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
   transform: translateX(-100%);
   pointer-events: none;
 
    @include import.mq(sp) {
       width:100%;
+      height: 100%;
 }
 
   &.active{
@@ -96,13 +98,17 @@ button{
   list-style: none;
   margin: 0 auto;
   max-width: 1200px;
-  background: #fff;
+ background-color: #4158D0;
+background-image: linear-gradient(222deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
   height: auto;
  
 }
 
 .accordion-area li{
   margin: 10px 0;
+  font-style: italic;
+  color:black;
 }
 
 // .accordion-area section{
@@ -121,7 +127,7 @@ button{
 
   &:hover{
     opacity: .8;
-    background: #aADAF7;
+    background: #fff;
   }
 }
 
@@ -172,7 +178,7 @@ p{
 
   p:hover{
     opacity: .8;
-    background: #D2E6F7;
+    background: #ccc;
   }
 }
 

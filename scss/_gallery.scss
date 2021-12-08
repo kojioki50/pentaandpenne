@@ -36,7 +36,6 @@ h1{
     flex-wrap:wrap;
     padding:20px 0;
     margin: 30px auto;
-    border: 1px solid limegreen;
      @include import.mq(sp) {
      display: flex;
      justify-content: space-evenly;
@@ -47,7 +46,6 @@ h1{
   .p-each-goods{
     width:calc((100% - 99px) / 4 );
     height: auto;
-    border: 1px solid yellow;
     img
     {
       width:150px;
@@ -72,14 +70,7 @@ h1{
 }
 }
 
-.p-archive-item-img{
-   width:100%;
-   height: auto;
-  img{
-  height: auto;
-  width:70%
-  }
-}
+
 
 .js-api{
   opacity: 0;

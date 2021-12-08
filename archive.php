@@ -26,8 +26,8 @@
         </div>
 
           <div class="p-archive-item-text">
-            <?php the_content(); ?>
-            <button class="cart-button">詳しく見る</button>
+            <?php the_excerpt(); ?>
+            <button class="news-button">詳しく見る</button>
           </div>
      
       </div>

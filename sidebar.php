@@ -14,16 +14,16 @@
       <ul class="accordion-area">
         <li>
           <section>
-            <h3 class="title">商品一覧</h3>
+            <h3 class="title">ITEMS</h3>
             <div class="box">
-              <p><a>ペンジ</a></p>
-              <p><a>ペンネ</a></p>
+              <p><a>PENNE</a></p>
+              <p><a>PENTA</a></p>
             </div>
           </section>
         </li>
         <li>
           <section>
-            <h3 class="title">イベント</h3>
+            <h3 class="title">EVENT</h3>
             <div class="box">
               <p><a>２周年記念アイテム</a></p>
               <p><a>冬限定アイテム</a></p>
