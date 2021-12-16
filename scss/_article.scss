@@ -11,15 +11,18 @@
     padding: 10px 0;
   }
   li{
-    margin-left: 50px;
+    margin-left: 20px;
     text-align: left;
     border-bottom:1px red dashed;
     padding: 10px 0;
     a{
       font-weight: bold;
       font-style: italic;
-      font-size: 20px;
+      font-size: 16px;
       color: rgba(255,255,255,.6);
+      @include import.mq(sp) {
+    font-size: 12px;
+    }
     }
     &:hover{
       opacity: .6;
@@ -32,6 +35,9 @@
   padding-right: 20px;
   color:rgb(233, 66, 66);
   font-size: 20px;
+  @include import.mq(sp) {
+    font-size: 16px;
+    }
 }
 
 .p-infonews{
@@ -39,6 +45,9 @@
    color:rgb(45, 235, 20);
    padding-right: 20px;
    font-size: 20px;
+   @include import.mq(sp) {
+    font-size: 16px;
+    }
 }
 
 .p-importantnews{
@@ -46,6 +55,9 @@
   padding-right: 20px;
   color:#074073;
    font-size: 20px;
+    @include import.mq(sp) {
+    font-size: 16px;
+    }
 }
 
 .p-news{
@@ -313,30 +325,31 @@ textarea{
 //   }
 
   .p-blog__box{
-    padding: 30px 0;
-    display: block;
-    @include import.mq(pc) {
-      display: flex;
-      gap: 100px;
-      height: auto;
-      align-items: center;
-      position: relative;
+    display: flex;
+    gap: 100px;
+    height: auto;
+    align-items: center;
+    position: relative;
+     margin-bottom: 20px;
+    // border: 2px solid red;
+    @include import.mq(sp) {
+      padding: 30px 0;
+      margin-top: 20px;
+      display: block;
      
     }
   
 
   
   .p-blog__img img{
-     width:100%;
-     height: auto;
+     width:80%;
+     height: 80%;
      background-position-x: center;
      background-position-y: center;
      object-fit: cover;
      object-position: center;
      
-    @include import.mq(pc) {
-       width:100%;
-    }
+   
   }
 
 
@@ -344,27 +357,38 @@ textarea{
 
 
 .p-blog__text{
-  width:100%;
+  margin-top: 0;
+    width:50%;
+    vertical-align: bottom;
   position: relative;
   margin-top: 20px;
-   @include import.mq(pc) {
-     margin-top: 0;
-       width:50%;
-       vertical-align: bottom;
+  @include import.mq(sp) {
+     width:100%;
    }
     h1{
-      margin-top: 30px;
-      @include import.mq(pc) {
-       margin-top: 0;
+      margin-top: 0;
+      text-align: left;
+      @include import.mq(sp) {
+        margin-top: 30px;
+        text-align: center;
       }
     }
   h1,
   h2,
   p
   {
+    margin-top: 0;
     text-align: left;
-    margin-bottom: 20px;
-  }
+    padding-bottom: 20px;
+    @include import.mq(sp) {
+      text-align: center;
+    }
 }
 }
+}
+
+.search-result{
+  text-align: center;
+}
+
 

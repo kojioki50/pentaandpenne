@@ -1,23 +1,19 @@
 @use "import";
 
 header{
-  // background-color: #0c1cbd;
-  // background-image: linear-gradient(135deg, #0c1cbd 0%, #6894dc 50%, #2536a0 100%);
-  background-color: #605DC9;
+ 
+//   background-color: #4158D0;
+// background-image: linear-gradient(111deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 22%, #FFCC70 49%, #c850c0 75%, #4158d0 100%);
   padding: 0 38px;
   width:100%;
   height: auto;
   position: fixed;
   z-index: 100;
   display: block;
-  // &.active{
-  //   display: none;
-  // }
-    @include import.mq(sp) {
-      height:40px;
-
-     }
   
+ 
   .header-sp-menu{
     ul{
     display: none;
@@ -30,12 +26,14 @@ header{
     .box{
        padding:5px 20px;
        display: block;
-       color:#ccc;
+       color:black;
       font-size:16px;
-      }
-
-      .box:hover{
-         color:white;
+      font-style: italic;
+    }
+    
+    .box:hover{
+      color:black;
+      opacity: .5;
       }
     }
   }
@@ -58,15 +56,17 @@ header{
    .title{
     cursor: pointer;
     display: block;
-    color:#ccc;
+    color:black;
+    font-style: italic;
     padding: 10px 0;
   }
   .box{
     font-size:16px;
   }
-
+  
   .box:hover{
-     color:white;
+    color:black;
+    opacity: .5;
      
 }
    
@@ -78,30 +78,30 @@ header{
 }
 
 
-.fadeup{
-  animation-name: fadeUpAnime;
-  animation-duration:.5s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
+// .fadeup{
+//   animation-name: fadeUpAnime;
+//   animation-duration:.5s;
+//   animation-fill-mode: forwards;
+//   opacity: 0;
+// }
 
-@keyframes  fadeUpAnime{
-  0% {
-      opacity: 0;
-      transform:translateY(-100px)
-    }
-    100% {
-      opacity: 1;
-      transform:translateY(0);
-    }
-}
+// @keyframes  fadeUpAnime{
+//   0% {
+//       opacity: 0;
+//       transform:translateY(-100px)
+//     }
+//     100% {
+//       opacity: 1;
+//       transform:translateY(0);
+//     }
+// }
 
-.delay-time01{
-  animation-delay: .5s;
-}
-.delay-time02{
-  animation-delay: .8s;
-}
+// .delay-time01{
+//   animation-delay: .5s;
+// }
+// .delay-time02{
+//   animation-delay: .8s;
+// }
 
 
 

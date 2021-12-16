@@ -113,3 +113,23 @@ h1{
   color:white;
   font-size: 20px;
 }
+
+.p-blog__single__box{
+  
+ .wp-block-columns{
+   margin-bottom: 0;
+ }
+  img{
+    width:80%;
+    height: 80%;
+
+  }
+  h1,h2,h3,h4,p{
+    text-align: left;
+    padding-bottom: 20px;
+     @include import.mq(sp) {
+       text-align: center;
+      
+}
+  }
+}

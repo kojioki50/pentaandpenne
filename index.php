@@ -1,18 +1,17 @@
 <?php get_header(); ?>
   <div class="video-container">
-    <div class="p-main-title blur">
+    <div class="p-main-title__video blur">
       <h1>PENTA AND PENNE'S TALE </h1>
     </div>
     <video class='video' src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/Snow.mp4" autoplay muted loop></video>
   </div>
   <main>
-    <ul class="share">
+    <ul class="share__top">
       <li><span>2021 PENTA AND PENNE</span></li>
       <li><a><i class="bi bi-twitter"></i></a></li>
       <li><span>SHERE</span></li>
     </ul>
     <div class="l-main-container">
-      <?php the_content(); ?>
      <? get_search_form(); ?>
      <p class="p-news">ニュース一覧</p>
 <div class="p-info-box">
@@ -56,7 +55,7 @@ wp_reset_postdata();
 </div>
 
 
-<a class="p-past__info" href="<?php echo esc_url(home_url('/archive'));?>">過去のニュース一覧はこちら</a>
+<a class="p-past__info" href="<?php echo esc_url(home_url('/archive'));?>">ニュース一覧はこちら</a>
       <div class="p-main-catch">キャッチフレーズ</div>
       <div class="p-intro-container">
         <div class="p-intro"></div>
@@ -90,19 +89,25 @@ wp_reset_postdata();
           )
         )
 
-      );
-      $new_query = new WP_Query($args);
-      if($new_query->have_posts()): while($new_query->have_posts()):
-        $new_query->the_post();
-      ?>
+      );?>
+      
+      <?php $new_query = new WP_Query($args); ?>
+      <?php if($new_query->have_posts()): while($new_query->have_posts()): ?>
+      <?php $new_query->the_post(); ?>
         <?php if(has_post_thumbnail()):?>
-      <div class="p-each-goods"> <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium',['class' => 'goods-img js-api delay-time03']); ?></a> </div>
-        <?php endif;?>
-        <?php endwhile;
-        wp_reset_postdata();
-        else: ?>
+      <div class="p-each-goods"> <a href="<?php the_permalink(); ?>">
+      <?php the_post_thumbnail('medium',['class' => 'goods-img js-api delay-time03']);?>
+      </a> 
+      
+     </div>
+      <?php endif;?>
+      <?php endwhile; ?>
+      <?php wp_reset_postdata();?>
+      <?php else: ?>
+        
         <h3>投稿はありません。</h3>
         <?php endif; ?>
+        
       </div>
       </div>
     </div>
@@ -118,3 +123,4 @@ wp_reset_postdata();
 
   <?php get_sidebar(); ?>
   <?php get_footer(); ?>
+  

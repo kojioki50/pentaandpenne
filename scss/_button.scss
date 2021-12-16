@@ -41,18 +41,18 @@
 main{
 position: relative;
 
-.share{
+.share__top{
   font-style: italic;
   color: azure;
   opacity: .8;
   position: absolute;
-  top:-270px;
+  top: -270px;
   left:-120px;
   display: flex;
   transform: rotate(-90deg);
   filter: drop-shadow(6px 6px 6px rgb(255, 50, 111));
   @include import.mq(sp) {
-      top:-200px;
+      top:-180px;
       left:-80px;
       font-size: 10px;
   }
@@ -70,6 +70,35 @@ position: relative;
   }
   
 }
+// .share{
+//   font-style: italic;
+//   color: azure;
+//   opacity: .8;
+//   position: absolute;
+//   top: 70px;
+//   left:-120px;
+//   display: flex;
+//   transform: rotate(-90deg);
+//   filter: drop-shadow(6px 6px 6px rgb(255, 50, 111));
+//   @include import.mq(sp) {
+//       top:-200px;
+//       left:-80px;
+//       font-size: 10px;
+//   }
+//   li{
+//     padding:0 10px;
+//   }
+//   li:nth-child(2){
+//     transform:rotate(90deg);
+//     cursor: pointer;
+//     font-size: 30px;
+//     padding-right:30px;
+//   @include import.mq(sp) {
+//       font-size: 26px;
+//   }
+//   }
+  
+// }
 
 }
 
@@ -136,17 +165,38 @@ position: relative;
   .c-detail{
   
   display: inline-block;
-  margin-top: 100px;
-  padding:10px 20px;
-  background-color: #fff;
-  color: #707070;
+   padding:10px 25px;
+  background-color: #4158D0;
+background-image: linear-gradient(135deg, #4158D0 0%, #C850C0 22%, #FFCC70 49%, #c850c0 75%, #4158d0 100%);
+  color: black;
   border:1px solid #707070;
   cursor: pointer;
   border-radius: 9999px;
   @include import.mq(pc) {
       position: absolute;
       left:35%;
+      top:100px;
+       padding:15px 40px;
+      font-size: 20px;
+    }
+    &:hover{
+      opacity: .5;
+    }
+}
+  .c-detail__blog{
+  display: inline-block;
+  padding:10px 25px;
+  background-color: #4158D0;
+  background-image: linear-gradient(135deg, #4158D0 0%, #C850C0 22%, #FFCC70 49%, #c850c0 75%, #4158d0 100%);
+  color: black;
+  border:1px solid #707070;
+  cursor: pointer;
+  border-radius: 9999px;
+  @include import.mq(pc) {
+      left:35%;
       top:0;
+      padding:15px 40px;
+      font-size: 20px;
     }
     &:hover{
       opacity: .5;

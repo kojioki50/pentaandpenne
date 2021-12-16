@@ -79,3 +79,8 @@
         $html = preg_replace('/(width|height)="\d*"\s/', '', $html);
         return $html;
     }
+
+    add_action( 'after_setup_theme' , 'woocommerce_support');
+    function woocommerce_support() {
+      add_theme_support('woocommerce');
+    }

@@ -1,10 +1,9 @@
 <?php get_header(); ?>
-<div class="video-container">
-    <div class="p-main-title blur">
-      <h1> <?php echo the_search_query(); ?>の検索結果 </h1>
-    </div>
-    <video class='video' src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/Snow.mp4" autoplay muted loop></video>
-  </div>
+<div class="p-main-title blur">
+       <h1 class="search-result"> <?php echo the_search_query(); ?>の検索結果 </h1>
+      </div>
+      
+    
   <main>
     <ul class="share">
       <li><span>2021 PENTA AND PENNE</span></li>
