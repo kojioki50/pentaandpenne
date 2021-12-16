@@ -1,7 +1,9 @@
+@charset "UTF-8";
 body {
   overflow-x: hidden;
   position: relative;
   background-color: #e9eefc;
+  font-family: "ヒラギノ角ゴシック", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Meiryo UI", sans-serif;
 }
 
 .l-wrapper {
@@ -375,6 +377,115 @@ header .header-menu ul .box:hover {
 
 .center .slick-next {
   right: -35px;
+}
+
+/*コンタクトフォーム7用のcss*/
+.l-contact {
+  padding: 60px 60px 100px 60px;
+  margin: 0 auto;
+  /* Contact Form 7 */
+  /* 必須マーク */
+  /* 任意マーク */
+  /* 項目名を太字にする */
+  /* 入力項目を見やすくする */
+  /* 必須項目の入力欄を見やすくする */
+  /* 送信ボタンを見やすくする */
+  /* エラーメッセージを見やすくする */
+}
+
+@media screen and (max-width: 599px) {
+  .l-contact {
+    padding: 50px 10px;
+  }
+}
+.l-contact p.contact-text {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.l-contact .wpcf7-form {
+  margin: 0 auto;
+}
+
+.l-contact p {
+  text-align: left;
+}
+
+.l-contact .must {
+  color: #fff;
+  margin-right: 10px;
+  padding: 6px 10px;
+  background: #f58694;
+  /* 背景色 */
+  border-radius: 5px;
+}
+
+.l-contact .free {
+  color: #fff;
+  margin-right: 10px;
+  padding: 6px 10px;
+  background: #7fbfff;
+  /* 背景色 */
+  border-radius: 5px;
+}
+
+.l-contact form {
+  width: 60%;
+}
+
+@media screen and (max-width: 599px) {
+  .l-contact form {
+    width: 100%;
+  }
+}
+.l-contact form p {
+  font-weight: 300;
+}
+
+.l-contact input.wpcf7-form-control.wpcf7-text,
+.l-contact textarea.wpcf7-form-control.wpcf7-textarea {
+  width: 100%;
+  padding: 8px 15px;
+  margin: 10px auto;
+  border: 1px solid #d0d5d8;
+  /* 枠線の色 */
+  border-radius: 3px;
+}
+
+.l-contact textarea.wpcf7-form-control.wpcf7-textarea {
+  height: 200px;
+}
+
+.l-contact input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required,
+.l-contact .wpcf7-textarea {
+  background: #eff1f5;
+  /* 背景色 */
+}
+
+.l-contact input.wpcf7-submit {
+  width: 100%;
+  /* 好みで60〜80%でもOK */
+  height: 60px;
+  border-color: #ffbf7f;
+  /* 枠線の色 */
+  background: #ffbf7f;
+  /* ボタンの色 */
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 2px;
+  text-align: center;
+  margin-left: 0;
+}
+
+.l-contact span.wpcf7-not-valid-tip,
+.l-contact .wpcf7-response-output.wpcf7-validation-errors {
+  color: red;
+  font-weight: 600;
+}
+
+.l-contact span.wpcf7-spinner {
+  display: none;
 }
 
 .sidebar-container {
