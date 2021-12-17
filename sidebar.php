@@ -10,6 +10,7 @@
         <button type="submit" name="search">検索</button>
       </form>
     </div>
+    
     <div class="sidebar-accordion">
       <ul class="accordion-area">
         <li>

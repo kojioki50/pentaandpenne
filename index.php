@@ -3,17 +3,18 @@
     <div class="p-main-title__video blur">
       <h1>PENTA AND PENNE'S TALE </h1>
     </div>
+    <img class="top-image js-onload" src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/penjipene-top.png" >
     <video class='video' src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/Snow.mp4" autoplay muted loop></video>
   </div>
   <main>
     <ul class="share__top">
       <li><span>2021 PENTA AND PENNE</span></li>
       <li><a><i class="bi bi-twitter"></i></a></li>
-      <li><span>SHERE</span></li>
+      <li><span>twitter</span></li>
     </ul>
     <div class="l-main-container">
      <? get_search_form(); ?>
-     <p class="p-news">ニュース一覧</p>
+     <p class="p-news">ニュース</p>
 <div class="p-info-box">
       <?php
 $information= get_posts( array(
@@ -56,7 +57,9 @@ wp_reset_postdata();
 
 
 <a class="p-past__info" href="<?php echo esc_url(home_url('/archive'));?>">ニュース一覧はこちら</a>
-      <div class="p-main-catch">キャッチフレーズ</div>
+      <div class="p-main-catch">
+      <img class="main-catch_img js-api" src="<?php echo esc_url( get_template_directory_uri()); ?>/./image/penjipenne-cachi.png">
+      </div>
       <div class="p-intro-container">
         <div class="p-intro"></div>
 
@@ -110,7 +113,7 @@ wp_reset_postdata();
         
       </div>
       </div>
-    </div>
+    
 
 
 

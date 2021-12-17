@@ -5,19 +5,36 @@
 }
 
 .video-container {
+  position: relative;
   padding-top: 50px;
   height: 600px;
   margin-bottom: 20px;
+  text-align: center;
   @include import.mq(sp) {
     height: 400px;
-    padding-top: 40px;
+    padding-top: 30px;
   }
   .video {
     width: 100%;
     height: 80%;
     object-fit: cover;
   }
+  .top-image {
+    position: absolute;
+    bottom:0;
+    left:60%;
+    transform:translateX(-50%);
+    height: 60%;
+    width: 70%;
+    object-fit: cover;
+    @include import.mq(sp) {
+    height: 40%;
+    width: 80%;
+    bottom:0;
+  }
+  }
 }
+
 
 .p-main-title__video {
   top: 0;
@@ -100,6 +117,7 @@
     transform: scale(1.02);
   }
   to {
+
     filter: blur(0);
     transform: scale(1);
   }
@@ -108,7 +126,7 @@
 .l-main-container {
   margin: 0 38px 17px;
 
-  form {
+  .l-search__form {
     margin-top: 30px;
     margin-bottom: 20px;
     display: flex;
@@ -119,13 +137,13 @@
     }
 
     .input-border {
-      border: 1px solid #707070;
+      border: 1px solid black;
       display: inline-block;
       background: #fff url("../image/la-search@2x.png") no-repeat 12px center;
       background-size: 20px 20px;
       height: 50px;
       width: 400px;
-      border-radius: 5px;
+      border-radius: 9999px;
       margin-right: 12px;
       position: relative;
 
@@ -139,6 +157,7 @@
         left: 40px;
         height: 46px;
         width: 350px;
+        
 
         @include import.mq(sp) {
           width: 160px;
@@ -152,10 +171,13 @@
       padding-right: 20px;
       padding-left: 20px;
       background-color: #fff;
-      color: #707070;
-      border: 1px solid #707070;
-      border-radius: 5px;
+      color: black;
+      border: 1px solid black;
+      border-radius: 9999px;
       cursor: pointer;
+      &:hover{
+        opacity: .5;
+      }
     }
   }
 
@@ -312,96 +334,12 @@
 // }
 // }
 
-/*コンタクトフォーム7用のcss*/
-.l-contact {
-  padding: 60px 60px 100px 60px;
-  margin: 0 auto;
-  @include import.mq(sp) {
-    padding: 50px 10px;
-  }
-  p.contact-text {
-    text-align: center;
-    margin-bottom: 80px;
-  }
-
-  .wpcf7-form {
-    margin: 0 auto;
-  }
-
-  p {
-    text-align: left;
-  }
-
-  /* Contact Form 7 */
-  /* 必須マーク */
-  .must {
-    color: #fff;
-    margin-right: 10px;
-    padding: 6px 10px;
-    background: #f58694; /* 背景色 */
-    border-radius: 5px;
-  }
-
-  /* 任意マーク */
-  .free {
-    color: #fff;
-    margin-right: 10px;
-    padding: 6px 10px;
-    background: #7fbfff; /* 背景色 */
-    border-radius: 5px;
-  }
-
-  form {
-    width: 60%;
-    @include import.mq(sp) {
-      width: 100%;
-    }
-  }
-  /* 項目名を太字にする */
-  form p {
-    font-weight: 300;
-  }
-
-  /* 入力項目を見やすくする */
-  input.wpcf7-form-control.wpcf7-text,
-  textarea.wpcf7-form-control.wpcf7-textarea {
-    width: 100%;
-    padding: 8px 15px;
-    margin: 10px auto;
-    border: 1px solid #d0d5d8; /* 枠線の色 */
-    border-radius: 3px;
-  }
-  textarea.wpcf7-form-control.wpcf7-textarea {
-    height: 200px;
-  }
-
-  /* 必須項目の入力欄を見やすくする */
-  input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required,
-  .wpcf7-textarea {
-    background: #eff1f5; /* 背景色 */
-  }
-
-  /* 送信ボタンを見やすくする */
-  input.wpcf7-submit {
-    width: 100%; /* 好みで60〜80%でもOK */
-    height: 60px;
-    border-color: #ffbf7f; /* 枠線の色 */
-    background: #ffbf7f; /* ボタンの色 */
-    color: #fff;
-    font-size: 20px;
-    font-weight: 400;
-    border-radius: 2px;
-    text-align: center;
-    margin-left: 0;
-  }
-
-  /* エラーメッセージを見やすくする */
-  span.wpcf7-not-valid-tip,
-  .wpcf7-response-output.wpcf7-validation-errors {
-    color: red;
-    font-weight: 600;
-  }
-  span.wpcf7-spinner {
-    display: none;
-  }
+.l-cart,.l-main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 300px);
 }
+footer {
+  margin-top: auto;
+}
+

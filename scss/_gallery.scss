@@ -108,6 +108,39 @@ h1{
   animation-delay: 1s;
 }
 
+// .js-onload{
+//    opacity: 0;
+//   //  transition: 1s;
+// }
+
+// .js-onload.appear{
+//   opacity: 1;
+//   margin-top: 300px;
+
+// }
+.js-onload{
+  opacity: 0;
+  
+  
+}
+
+.js-onload.appear{
+  animation-name: sample;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes  sample{
+  0% {
+      opacity: 0;
+      
+    }
+    100% {
+      opacity: 1;
+      
+    }
+}
+
 .p-each-price{
   background-color: rgba(220, 20, 60, 0.788);
   color:white;

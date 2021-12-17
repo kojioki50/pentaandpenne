@@ -12,6 +12,6 @@
 <script src="<?php echo esc_url(get_template_directory_uri()); ?>/slick/slick.min.js"></script>
 <script src="<?php echo esc_url(get_template_directory_uri()); ?>/slick/slick-config.js"></script>
 
-</body>
 <?php wp_footer(); ?>
+</body>
 </html>

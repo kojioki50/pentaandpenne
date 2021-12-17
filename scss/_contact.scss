@@ -1,0 +1,110 @@
+@use "import";
+
+/*コンタクトフォーム7用のcss*/
+.l-contact {
+  padding: 0 60px 100px 60px;
+  margin: 0 auto;
+  @include import.mq(sp) {
+    padding:0 10px 50px 10px;
+  }
+  .contact__text__box{
+   background-color: #C850C0;
+background-image: linear-gradient(180deg, #C850C0 25%, #FFCC70 79%);
+
+    margin: 0 auto;
+    width: 60%;
+    border-radius: 10px;
+    padding:10px 0;
+    margin-bottom: 30px;
+     @include import.mq(sp) {
+      width: 100%;
+    }
+  p.contact-text {
+    color:#333;
+    text-align: center;
+    font-size: 20px;
+  }
+  }
+  .wpcf7-form {
+    margin: 0 auto;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  /* Contact Form 7 */
+  /* 必須マーク */
+  .contact__name,
+  .contact__email {
+    color: #fff;
+    margin-right: 10px;
+    padding: 6px 10px;
+    background: #f58694; /* 背景色 */
+    border-radius: 5px;
+  }
+
+  /* 任意マーク */
+  .contact__message {
+    color: #fff;
+    margin-right: 10px;
+    padding: 6px 10px;
+    background: #7fbfff; /* 背景色 */
+    border-radius: 5px;
+  }
+
+  form {
+    width: 60%;
+    @include import.mq(sp) {
+      width: 100%;
+    }
+  }
+  /* 項目名を太字にする */
+  form p {
+    font-weight: 300;
+  }
+
+  /* 入力項目を見やすくする */
+  input.wpcf7-form-control.wpcf7-text,
+  textarea.wpcf7-form-control.wpcf7-textarea {
+    width: 100%;
+    padding: 8px 15px;
+    margin: 20px auto;
+    border: 1px solid #d0d5d8; /* 枠線の色 */
+    border-radius: 3px;
+  }
+  textarea.wpcf7-form-control.wpcf7-textarea {
+    height: 200px;
+  }
+
+  /* 必須項目の入力欄を見やすくする */
+  input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required,
+  .wpcf7-textarea {
+    background: #eff1f5; /* 背景色 */
+  }
+
+  /* 送信ボタンを見やすくする */
+  input.wpcf7-submit {
+    width: 100%; /* 好みで60〜80%でもOK */
+    height: 60px;
+    border-color: #ffbf7f; /* 枠線の色 */
+    background-color: #66df72;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 9999px;
+    text-align: center;
+    margin-left: 0;
+    margin-top:50px;
+  }
+
+  /* エラーメッセージを見やすくする */
+  span.wpcf7-not-valid-tip,
+  .wpcf7-response-output.wpcf7-validation-errors {
+    color: red;
+    font-weight: 600;
+  }
+  span.wpcf7-spinner {
+    display: none;
+  }
+}

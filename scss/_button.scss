@@ -17,7 +17,7 @@
    cursor:pointer;
    padding-left: 22%;
    display: block;
-   color: #ccc;
+   color: black;
 
     &:hover{
     opacity:.5;
@@ -46,13 +46,13 @@ position: relative;
   color: azure;
   opacity: .8;
   position: absolute;
-  top: -270px;
+  top: -280px;
   left:-120px;
   display: flex;
   transform: rotate(-90deg);
   filter: drop-shadow(6px 6px 6px rgb(255, 50, 111));
   @include import.mq(sp) {
-      top:-180px;
+      top:-200px;
       left:-80px;
       font-size: 10px;
   }
@@ -163,33 +163,36 @@ position: relative;
   }
 
   .c-detail{
-  
-  display: inline-block;
-   padding:10px 25px;
-  background-color: #4158D0;
-background-image: linear-gradient(135deg, #4158D0 0%, #C850C0 22%, #FFCC70 49%, #c850c0 75%, #4158d0 100%);
-  color: black;
-  border:1px solid #707070;
-  cursor: pointer;
-  border-radius: 9999px;
-  @include import.mq(pc) {
-      position: absolute;
-      left:35%;
-      top:100px;
-       padding:15px 40px;
-      font-size: 20px;
-    }
+    position: absolute;
+    left:0;
+    top:100px;
+    padding:5px 15px;
+    font-size: 20px;
+    display: block;
+    background-color: #4158D0;
+    background-image: linear-gradient(135deg, #4158D0 0%, #C850C0 22%, #FFCC70 49%, #c850c0 75%, #4158d0 100%);
+    color: black;
+    border:1px solid black;
+    cursor: pointer;
+    border-radius: 9999px;
+    @include import.mq(sp) {
+      position:static;
+      padding:10px 5px;
+      width: 30%;
+      margin: 0 auto;
+      
+      }
     &:hover{
       opacity: .5;
     }
-}
+  }
   .c-detail__blog{
   display: inline-block;
   padding:10px 25px;
   background-color: #4158D0;
   background-image: linear-gradient(135deg, #4158D0 0%, #C850C0 22%, #FFCC70 49%, #c850c0 75%, #4158d0 100%);
   color: black;
-  border:1px solid #707070;
+  border:1px solid black;
   cursor: pointer;
   border-radius: 9999px;
   @include import.mq(pc) {

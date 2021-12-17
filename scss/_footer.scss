@@ -2,7 +2,12 @@
 
 
 
-.footer{
+footer{
+  height: auto;
+  width: 100%;
+  // position: absolute;
+  // bottom: 0;
+  vertical-align: bottom;
   padding: 20px 38px;
   background-color: #0c1cbd;
 background-image: linear-gradient(135deg, #0c1cbd 0%, #6894dc 50%, #2536a0 100%);

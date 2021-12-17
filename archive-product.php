@@ -10,18 +10,13 @@
     <? get_search_form(); ?>
 
     <div class="p-item-box">
-
-        <?php while (have_posts()) : the_post(); ?>
-            <?php wc_get_template_part('content', 'product'); ?>
-        <?php endwhile; ?>
-
+        <?php echo do_shortcode('[products]'); ?>
     </div>
 
 </div>
 
 
 <?php wp_pagenavi(); ?>
-</div>
 </main>
 
 <?php get_sidebar(); ?>

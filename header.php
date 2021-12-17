@@ -20,16 +20,16 @@
       <ul>
         <li><button class="menu js-menu box fadeup delay-time01">メニュー</button></li>
         <li><a class="title box fadeup" href="<?php echo esc_url(home_url('/'));?>">PENS</a></li>
-         <li><button class="title box fadeup delay-time01">カート</button></li>
+         <li><a class="title box fadeup delay-time01" href="<?php echo esc_url(home_url('/cart'));?>">カート</a></li>
       </ul>
     </div>
     <div class="header-menu">
       <ul>
-        <li><a class="title box fadeup delay-time02" href="<?php echo esc_url(home_url('/item'));?>"> グッズ</a></li>
+        <li><a class="title box fadeup delay-time02" href="<?php echo esc_url(home_url('/shop'));?>"> グッズ</a></li>
         <li><a class="title box fadeup delay-time01" href="<?php echo esc_url(home_url('/contact'));?>"> CONTACT US</a></li>
         <li><a class="title box fadeup" href="<?php echo esc_url(home_url('/'));?>">PENS</a></li>
         <li><a class="title box fadeup delay-time01" href="<?php echo esc_url(home_url('/blog'));?>">BLOG</a></li>
-        <li><button class="title box fadeup delay-time02">カート</button></li>
+        <li><a class="title box fadeup delay-time02" href="<?php echo esc_url(home_url('/cart'));?> ">カート</a></li>
       </ul>
       
   </div>

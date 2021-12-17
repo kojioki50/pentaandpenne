@@ -1,5 +1,5 @@
       <div id="search-wrap">
-      <form role="search" method="get" action="/">
+      <form class="l-search__form" role="search" method="get" action="/">
         <label for="search-text"></label>
         <div class="input-border">
           <input type="text" value="" id="search-text" name="s">

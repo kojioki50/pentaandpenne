@@ -9,7 +9,7 @@
       <li><span>SHERE</span></li>
     </ul> -->
 
-    <div class="l-main-container">
+    <div class="l-main-container l-blog">
       
        <?php  if (have_posts()) : while (have_posts()) :the_post(); ?>
        <div class="p-blog__box">
@@ -23,7 +23,7 @@
 
           <div class="p-blog__text">
             <?php the_excerpt(); ?>
-            <a  class="c-detail" href="<?php the_permalink(); ?>">go to detail</a>
+            <a  class="c-detail" href="<?php the_permalink(); ?>">go detail</a>
           </div>
      
       </div>
